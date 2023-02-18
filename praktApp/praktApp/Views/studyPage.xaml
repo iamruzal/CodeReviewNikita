@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="praktApp.Views.StudyPage"
+             NavigationPage.HasNavigationBar="false"
+             Title="Меню"
+             BackgroundColor="#252626"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame CornerRadius="10" Margin="10, 40, 10, 0" >
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ChooseCategory_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="Category.png" WidthRequest="20" HeightRequest="20" Margin="0, 0, 10, 0"/>
+                    <Label Text="Выбрать категорию" Margin="0, 0, 10, 0"/>
+                </StackLayout>
+            </Frame>
+            <Frame Margin="10, 0, 10, 0">
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="VipolnitZauch_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="study.png" WidthRequest="20" HeightRequest="15" Margin="0, 0, 10, 0"/>
+                    <Label Text="Заучивание"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

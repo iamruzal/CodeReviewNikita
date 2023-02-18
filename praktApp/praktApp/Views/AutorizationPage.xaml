@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="praktApp.Views.AutorizationPage"
+             Title="Авторизация" BackgroundColor="#252626">
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout VerticalOptions="Center" Margin="50">
+                <Entry Placeholder="Логин" x:Name="EmailEntry"/>
+                <Entry Placeholder="Пароль" IsPassword="True" x:Name="PasswordEntry"/>
+                <Label Text="Забыли пароль?" x:Name="ForgetPasswordLabel">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                <Button Text="Войти" Clicked="ButEnter_Clicked" x:Name="ButEnter"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

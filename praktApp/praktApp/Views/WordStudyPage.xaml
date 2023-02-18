@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="praktApp.Views.WordStudyPage"
+             BackgroundColor="#252626"
+             >
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Заучивание" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+            <ProgressBar Progress="0" VerticalOptions="Start" x:Name="Progress" />
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Термин" FontSize="18" x:Name="LabelTerm" />
+            <Grid WidthRequest="350" Margin="-5, 120, 0,-10">
+                    <Entry  x:Name="EntTB" Completed="EntTB_Completed" Text="" MaxLength="30"/>
+                </Grid>
+        <Label Text="ВВЕДИТЕ ТЕРМИН" FontSize="12" TextColor="CornflowerBlue"/>
+        </StackLayout>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

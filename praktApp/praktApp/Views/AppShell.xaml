@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell x:Class="testAnd.AppShell"
+       xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:praktApp.Views">
+    <Shell.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TabBar">
+                <Setter Property="Shell.TabBarBackgroundColor" Value="LightSkyBlue"/>
+                <Setter Property="Shell.TabBarDisabledColor" Value="Black"/>
+                <Setter Property="Shell.TabBarTitleColor" Value="Black" />
+                <Setter Property="Shell.TabBarUnselectedColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </Shell.Resources>
+    <TabBar x:Name="TabSh">
+        
+        <Tab Title="Меню" Icon="icon_study.png" x:Name="MenuTab">
+            <ShellContent ContentTemplate="{DataTemplate views:StudyPage}"/>
+        </Tab>
+        <Tab Title="Словарь" Icon="icon_book.png" x:Name="TabGlossary">
+            <ShellContent ContentTemplate="{DataTemplate views:GlossaryPage}"/>
+        </Tab>
+
+
+        <Tab Title="Категории" Icon="icon_study.png" x:Name="CategoryTab">
+            <ShellContent ContentTemplate="{DataTemplate views:SelectedCategoriesPage}"/>
+        </Tab>
+        <Tab Title="Класс" Icon="icon_book.png" x:Name="ClassTab">
+            <ShellContent ContentTemplate="{DataTemplate views:ClassListPage}"/>
+        </Tab>
+        
+        <Tab Title="Личный кабинет" Icon="icon_menu.png">
+            <ShellContent ContentTemplate="{DataTemplate views:MenuPage}"/>
+        </Tab>
+    </TabBar>
+</Shell>

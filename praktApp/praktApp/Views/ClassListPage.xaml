@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="praktApp.Views.ClassListPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Список класса"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView>
+            <CollectionView x:Name="collectionViewUser" Margin="20" SelectionMode="Single">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="10"/>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame>
+                            <Grid>
+                                <StackLayout>
+                                    <Label Text="{Binding FIO}" HorizontalOptions="Center"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Почта:"/>
+                                        <Label Text="{Binding Path = Email}" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Количество изученных категорий:"/>
+                                        <Label Text="{Binding Path = StudedCategory}" />
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Количество изучаемых категорий:"/>
+                                        <Label Text="{Binding Path = ChooseCategory}" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
