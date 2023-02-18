@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="praktApp.Views.MenuPage"
+             Title="Личный кабинет"
+BackgroundColor="#252626"
+             >
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="StackLayout">
+                <Setter Property="Margin" Value="15,10,10,10"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <StackLayout Margin="0" VerticalOptions="Center" x:Name="StackUserform">
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="ФИО:"/>
+                    <Label Text="{Binding Path = FIO}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Класс:"/>
+                    <Label Text="{Binding Path = Class.Name}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Роль:"/>
+                    <Label Text="{Binding Path = Role.Name}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout.Triggers>
+                        <DataTrigger TargetType="StackLayout"  Binding="{Binding Path= RoleId}" Value="2">
+                            <Setter Property="IsVisible" Value="False"/>
+                        </DataTrigger>
+                    </StackLayout.Triggers>
+                    <Label Text="Количество изученных категорий:"/>
+                    <Label Text="{Binding Path = StudedCategory}" />
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout.Triggers>
+                        <DataTrigger TargetType="StackLayout"  Binding="{Binding Path= RoleId}" Value="2">
+                            <Setter Property="IsVisible" Value="False"/>
+                        </DataTrigger>
+                    </StackLayout.Triggers>
+                    <Label Text="Количество изучаемых категорий:"/>
+                    <Label Text="{Binding Path = ChooseCategory}" />
+                </StackLayout>
+                <Button Text="Выйти" Margin="80,10,80,0" x:Name="ExitBut" Clicked="ExitBut_Clicked"/>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
