@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="praktApp.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="TextColor" Value="#D6D6D6"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="#3D3D3D"/>
+                <Setter Property="FontSize" Value="16"></Setter>
+                <Setter Property="CornerRadius" Value="10"></Setter>
+                <Setter Property="BorderWidth" Value="1"/>
+                <Setter Property="BorderColor" Value="DimGray"/>
+            </Style>
+            
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="#3D3D3D"/>
+                <Setter Property="CornerRadius" Value="10"></Setter>
+                <Setter Property="BackgroundColor" Value="#3D3D3D"/>
+                <Setter Property="BorderColor" Value="#626161"/>
+            </Style>
+
+            <Style TargetType="RadioButton">
+                <Setter Property="BackgroundColor" Value="#9B9A99"/>
+            </Style>
+
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="#D6D6D6"/>
+            </Style>
+            <!--
+            <Style TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#3D3D3D"/>
+            </Style>
+            -->
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
